@@ -1,15 +1,21 @@
-import React from 'react';
-import CartProvider from './infoContext/CartContext';
+import React, { useContext } from 'react';
+import './styles/global.css';
+import Navigation from './components/header/Navigation';
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import Hero from './components/header/Hero';
+
+
 
 function App() {
+
+
   return (
-    <CartProvider>
       <div className="App">
-        <div>
-          test
-        </div>
+        <Router>
+            <Navigation />
+            <Hero />
+        </Router>
       </div>
-    </CartProvider>
   );
 }
 

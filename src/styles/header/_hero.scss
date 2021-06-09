@@ -1,0 +1,38 @@
+.hero {
+  height: calc(100vh - 80px);
+  width: 100%;
+
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      display: block;
+      width: 600px;
+      z-index: 1;
+    }
+
+    .circle1 {
+      top: 30px;
+      height: 600px;
+      width: 600px;
+      position: absolute;
+      border-radius: 50%;
+      background: #a7a7a75e;
+    }
+    .circle2 {
+      top: 300px;
+      right: 600px;
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(160, 160, 160, 0.5);
+    }
+  }
+}
