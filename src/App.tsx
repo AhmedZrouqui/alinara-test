@@ -1,12 +1,17 @@
-import React from 'react';
-import CartProvider from './infoContext/CartContext';
+import React, { useContext } from 'react';
+import CartProvider, { CartContext } from './infoContext/CartContext';
 
 function App() {
+
+  const [cart, setCart] = useContext(CartContext);
+
   return (
     <CartProvider>
       <div className="App">
         <div>
-          test
+          {
+
+          }
         </div>
       </div>
     </CartProvider>
