@@ -1,0 +1,11 @@
+.newsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    height: 40px;
+    .news{
+        color: #8b8b8b;
+        text-decoration: none;
+    }
+}

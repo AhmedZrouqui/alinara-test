@@ -1,0 +1,204 @@
+.navigation {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: transparent;
+
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+
+
+  display: flex;
+  align-items: center;
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: $black-grey;
+    font-size: 24px;
+
+    .logo-text::selection {
+      color: #e67e22;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      width: 80%;
+      justify-content: space-between;
+
+      .nav-link {
+        text-decoration: none;
+        font-size: 16px;
+        color: $black-grey;
+        text-transform: lowercase;
+        font-weight: 500;
+
+        position: relative;
+
+        &::after {
+          content: "";
+          background: #e67e22;
+          width: 0%;
+          height: 2px;
+          left: 0px;
+          bottom: -5px;
+
+          position: absolute;
+
+          transition: 0.3s all ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+            transition: 0.3s all ease-in-out;
+          }
+        }
+      }
+    }
+
+    .closeIcon {
+      display: none;
+    }
+  }
+
+  .shopping-account {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    .sa-list {
+      display: flex;
+      list-style: none;
+    }
+
+    .sa-item {
+      margin: 15px;
+    }
+
+    .sa-link {
+      color: $black-grey;
+      cursor: pointer;
+      .icon {
+        font-size: 24px;
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+          color: #e67e22;
+          transition: 0.2s all ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+
+.active{
+  background: $black-grey;
+  .logo-section{
+    color: white;
+  }
+
+  .nav{
+    &-list{
+      .nav-link{
+        color: white;
+      }
+    }
+  }
+
+  .shopping-account {
+    .sa-link{
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation {
+    position: sticky;
+    top: 0;
+    .hamburger-menu {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        font-size: 30px;
+        cursor: pointer;
+        color : white;
+
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+          color: #e67e22;
+          transition: 0.2s all ease-in-out;
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: -100vw;
+      height: 100%;
+      z-index: 999;
+      background: $black-grey;
+      border-right: 1px #a7a7a7 solid;
+      align-items: center;
+
+      transition: 0.5s all ease;
+
+      .nav-list {
+        flex-direction: column;
+
+        height: 40%;
+      }
+
+      .closeIcon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+
+        cursor: pointer;
+
+        transition: 0.5s all ease-in;
+
+        &:hover {
+          transform: rotate(90deg);
+          transition: 0.5s all ease-in;
+        }
+      }
+    }
+
+    .openNav {
+      left: 0;
+      top: 0;
+      transition: 0.5s all ease;
+    }
+
+    .close {
+      display: none;
+    }
+  }
+}

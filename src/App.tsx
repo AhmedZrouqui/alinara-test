@@ -1,20 +1,23 @@
 import React, { useContext } from 'react';
-import CartProvider, { CartContext } from './infoContext/CartContext';
+import './styles/global.css';
+import Navigation from './components/header/Navigation';
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import Hero from './components/header/Hero';
+import NewsSection from './components/header/NewsSection';
+
+
 
 function App() {
 
-  const [cart, setCart] = useContext(CartContext);
 
   return (
-    <CartProvider>
       <div className="App">
-        <div>
-          {
-
-          }
-        </div>
+        <Router>
+            <NewsSection />
+            <Navigation />
+            <Hero />
+        </Router>
       </div>
-    </CartProvider>
   );
 }
 
