@@ -1,13 +1,15 @@
 .navigation {
-  position: sticky;
+  position: fixed;
   z-index: 999;
-  top: 0;
+  top: 40px;
+  left: 0;
+  right: 0;
+
   background: transparent;
 
   width: 100%;
   height: 80px;
   padding: 15px;
-
 
   display: flex;
   align-items: center;
@@ -21,7 +23,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    color: $black-grey;
+    color: white;
     font-size: 24px;
 
     .logo-text::selection {
@@ -45,7 +47,7 @@
       .nav-link {
         text-decoration: none;
         font-size: 16px;
-        color: $black-grey;
+        color: white;
         text-transform: lowercase;
         font-weight: 500;
 
@@ -94,7 +96,7 @@
     }
 
     .sa-link {
-      color: $black-grey;
+      color: white;
       cursor: pointer;
       .icon {
         font-size: 24px;
@@ -107,25 +109,27 @@
       }
     }
   }
+  transition: 0.2s all ease-in-out;
 }
 
-
-.active{
+.active {
+  top: 0;
   background: $black-grey;
-  .logo-section{
+  transition: 0.2s all ease-in-out;
+  .logo-section {
     color: white;
   }
 
-  .nav{
-    &-list{
-      .nav-link{
+  .nav {
+    &-list {
+      .nav-link {
         color: white;
       }
     }
   }
 
   .shopping-account {
-    .sa-link{
+    .sa-link {
       color: white;
     }
   }
@@ -133,8 +137,10 @@
 
 @media screen and (max-width: 1200px) {
   .navigation {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     .hamburger-menu {
       display: flex;
       flex: 1;
@@ -143,7 +149,7 @@
       .icon {
         font-size: 30px;
         cursor: pointer;
-        color : white;
+        color: white;
 
         transition: 0.2s all ease-in-out;
 

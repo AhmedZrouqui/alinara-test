@@ -27,10 +27,11 @@
 }
 
 .navigation {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 999;
-  top: 0;
+  top: 40px;
+  left: 0;
+  right: 0;
   background: transparent;
   width: 100%;
   height: 80px;
@@ -41,6 +42,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .navigation .hamburger-menu {
@@ -60,7 +63,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #202124;
+  color: white;
   font-size: 24px;
 }
 
@@ -104,7 +107,7 @@
 .navigation .nav-list .nav-link {
   text-decoration: none;
   font-size: 16px;
-  color: #202124;
+  color: white;
   text-transform: lowercase;
   font-weight: 500;
   position: relative;
@@ -159,7 +162,7 @@
 }
 
 .navigation .shopping-account .sa-link {
-  color: #202124;
+  color: white;
   cursor: pointer;
 }
 
@@ -176,7 +179,10 @@
 }
 
 .active {
+  top: 0;
   background: #202124;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .active .logo-section {
@@ -193,9 +199,10 @@
 
 @media screen and (max-width: 1200px) {
   .navigation {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
   }
   .navigation .hamburger-menu {
     display: -webkit-box;

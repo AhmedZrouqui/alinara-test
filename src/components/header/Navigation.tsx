@@ -39,7 +39,7 @@ const Navigation = () => {
     const [isSticky, setIsSticky] = React.useState(false)
 
     const onScrollNavigation = () => {
-        if(window.scrollY >= 50){
+        if(window.scrollY >= 40){
             setIsSticky(true)
         } else setIsSticky(false)
     }
@@ -49,7 +49,7 @@ const Navigation = () => {
 
 
     return (
-        <div className= "navigation active">
+        <div className= {isSticky ? 'navigation active' : 'navigation'}>
 
             <div className="hamburger-menu">
                 <MenuIcon onClick={() => dispatchIsOpen(!isOpen)} className="icon" id="openBtn"/>
