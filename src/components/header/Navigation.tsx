@@ -4,10 +4,11 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import PersonIcon from '@material-ui/icons/Person';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { useCart } from '../../infoContext/CartContext';
 
 
 
-const Navigation = () => {
+const Navigation = ({setIsOpen}) => {
 
     type humAction = true | false
     const navReducer = (state:boolean, action: humAction) => {
@@ -36,20 +37,19 @@ const Navigation = () => {
 
 
     const [isOpen, dispatchIsOpen] = React.useReducer(navReducer, false, undefined)
-    const [isSticky, setIsSticky] = React.useState(false)
+    
+    const [cart, setCart] = useCart()
 
-    const onScrollNavigation = () => {
-        if(window.scrollY >= 40){
-            setIsSticky(true)
-        } else setIsSticky(false)
+    const getCartCount = () => {
+        var cartCount = 0;
+
+        cart?.map(item => cartCount += item.quantity)
+
+        return cartCount
     }
 
-    window.addEventListener('scroll', onScrollNavigation)
-
-
-
     return (
-        <div className= {isSticky ? 'navigation active' : 'navigation'}>
+        <div className= "navigation">
 
             <div className="hamburger-menu">
                 <MenuIcon onClick={() => dispatchIsOpen(!isOpen)} className="icon" id="openBtn"/>
@@ -83,10 +83,18 @@ const Navigation = () => {
             <div className="shopping-account">
                 <ul className="sa-list">
                     <li className="sa-item">
-                        <Link to="" className="sa-link"><ShoppingBasketIcon className="icon"/></Link>
-                    </li>
-                    <li className="sa-item">
                         <Link to="" className="sa-link"><PersonIcon  className="icon"/></Link>
+                    </li>
+                    <li className="sa-item" id="cart">
+                        <Link to="" 
+                            className="sa-link" 
+                            onClick={() => setIsOpen(true)}>
+                                
+                            <ShoppingBasketIcon className="icon"/>
+                            <span className="cart-count">
+                                {getCartCount()}
+                            </span>
+                        </Link>
                     </li>
                 </ul>
             </div>

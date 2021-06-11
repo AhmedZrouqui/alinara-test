@@ -5,12 +5,10 @@
   left: 0;
   right: 0;
 
-  background: transparent;
-
+  background: white;
+  padding: 0 45px;
   width: 100%;
   height: 70px;
-  padding: 15px;
-
   display: flex;
   align-items: center;
 
@@ -20,8 +18,6 @@
 
   .logo-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 1;
     color: $black-grey;
     font-size: 24px;
@@ -83,23 +79,26 @@
   .shopping-account {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     .sa-list {
       display: flex;
       list-style: none;
+      height: 100%;
     }
 
     .sa-item {
       margin: 15px;
+      height: 100%;
     }
 
     .sa-link {
       color: $black-grey;
       cursor: pointer;
+      height: 100%;
       .icon {
-        font-size: 24px;
+        font-size: 32px;
         transition: 0.2s all ease-in-out;
 
         &:hover {
@@ -108,36 +107,32 @@
         }
       }
     }
-  }
-  transition: 0.2s all ease-in-out;
-}
 
-.active {
-  top: 0;
-  background: $black-grey;
-  transition: 0.2s all ease-in-out;
-  .logo-section {
-    color: white;
-  }
+    #cart {
+      position: relative;
 
-  .nav {
-    &-list {
-      .nav-link {
+      .cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #e67e22;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
+        font-size: 12px;
+        font-weight: 500;
       }
     }
   }
-
-  .shopping-account {
-    .sa-link {
-      color: white;
-    }
-  }
+  transition: 0.2s all ease-in-out;
 }
 
 @media screen and (max-width: 1200px) {
   .navigation {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -149,7 +144,7 @@
       .icon {
         font-size: 30px;
         cursor: pointer;
-        color: white;
+        color: $black-grey;
 
         transition: 0.2s all ease-in-out;
 
@@ -168,7 +163,7 @@
       left: -100vw;
       height: 100%;
       z-index: 999;
-      background: $black-grey;
+      background: white;
       border-right: 1px #a7a7a7 solid;
       align-items: center;
 

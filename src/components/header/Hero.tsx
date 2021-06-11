@@ -15,33 +15,6 @@ const Hero = () => {
 
                         <Link className="buy-now-btn" to="">Acheter Maintenant</Link>
                     </div>
-
-                    <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>
-                    <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>                <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>                <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>                <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>                <div>
-                    <h1>Enara!</h1>
-                        <h2>Illuminez votre chemin vers l'inconnu</h2>
-
-                    </div>
                 </div>
             </div>
         </>

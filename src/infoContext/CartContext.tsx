@@ -1,4 +1,3 @@
-import { Breadcrumbs } from '@material-ui/core';
 import * as React from 'react';
 import { useQuery } from "react-query";
 
@@ -45,11 +44,11 @@ const CartReducer = (state: IProductItem[], action: Action) => {
                 
                 const tempState =  state.map(product => {
 
-                    if((product.id === action.updateUpProduct.id) && (action.updateUpProduct.quantity>1)){
+                    if(product.id === action.updateUpProduct.id){
                         const _updatedProduct = {
                             ...product,
-                            quantity: product.quantity-1,
-                            amount: product.amount - product.price
+                            quantity: product.quantity+1,
+                            amount: Number((product.amount + product.price).toFixed(2))
                         }
                         return _updatedProduct;
                     }
@@ -69,13 +68,16 @@ const CartReducer = (state: IProductItem[], action: Action) => {
                 const tempState = state.map(product => {
 
                     if(product.id === action.updateDownProduct.id){
-                        const _updatedProduct = {
-                            ...product,
-                            quantity: product.quantity+1,
-                            amount: product.amount + product.price
+                        
+                        if(product.quantity > 1 ){
+                            const _updatedProduct = {
+                                ...product,
+                                quantity: product.quantity-1,
+                                amount: Number((product.amount - product.price).toFixed(2))
+                            }
+    
+                            return _updatedProduct;
                         }
-
-                        return _updatedProduct;
                     }
 
                     return product

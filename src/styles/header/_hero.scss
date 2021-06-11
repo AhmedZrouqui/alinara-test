@@ -2,22 +2,22 @@
   height: calc(100vh - 70px - 40px);
   width: 100%;
 
-  .content{
+  .content {
     width: 100%;
     height: 100%;
     position: relative;
 
-
-    img{
+    img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
 
-    &-text{
+    &-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
 
       color: white;
 
@@ -26,32 +26,19 @@
 
       text-align: center;
 
-      h2{
+      h2 {
         margin-bottom: 30px;
       }
 
-      .buy-now-btn{
-        padding: 24px 48px;
-        color: $black-grey;
+      .buy-now-btn {
+        padding: 20px 40px;
+        color: white;
         text-decoration: none;
-        background: white;
-        
+        background: $black-grey;
 
-        font-size: 24px;
+        font-size: 20px;
         text-transform: lowercase;
         font-weight: 500;
-
-        border: 1px $black-grey solid;
-        
-        &:hover{
-          background: $black-grey;
-          color: white;
-
-          transition: .5s all ease;
-        }
-
-        transition: .5s all ease;
-
       }
     }
   }
