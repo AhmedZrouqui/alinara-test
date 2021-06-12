@@ -3,7 +3,12 @@ import ReactDom from 'react-dom'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { useCart } from '../../infoContext/CartContext'
 
-const CartComponent = (props) => {
+interface IProps {
+    isOpen: boolean,
+    setIsOpen: Function,
+}
+
+const CartComponent = (props: IProps) => {
 
     const [cart, setCart] = useCart()
 
@@ -52,46 +57,81 @@ const CartComponent = (props) => {
     }
 
     if(!props.isOpen) return null
-    
-    return ReactDom.createPortal(
 
-        <>
-            <div 
-                className="background" 
-                onClick={() => props.setIsOpen(false)}>
-            </div>
+    else{
+        if(cart.length>0){
+            return ReactDom.createPortal(
 
-            <div className="cart">
-
-                <div className="quit-button">
-                    <span 
-                        className="btn" 
+                <>
+                    <div 
+                        className="background" 
                         onClick={() => props.setIsOpen(false)}>
-                            Fermer
-                            <ArrowRightAltIcon className="icon" />
-                    </span>
-                </div>
-                
-                <div className="cart-display">
-                    <div className="products">
-                        { displayCart() }
                     </div>
-                </div>
+        
+                    <div className="cart">
+        
+                        <div className="quit-button">
+                            <span 
+                                className="btn" 
+                                onClick={() => props.setIsOpen(false)}>
+                                    <span>Fermer</span>
+                                    <ArrowRightAltIcon className="icon" />
+                            </span>
+                        </div>
+                        
+                        <div className="cart-display">
+                            <div className="products">
+                                { displayCart() }
+                            </div>
+                        </div>
+        
+                        <div className="cart-bottom-section">
+                            <div className="line"></div>
+                            <div className="total-price-container">
+                                <span className="total-total">Prix Total de la Commande: <span className="total-total-price">{getTotalPrice()} MAD</span></span>
+                            </div>
+        
+                            <div>
+                                <button className="check-out-button">Commander Maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                </>,
+                document.getElementById("cart-portal") as HTMLElement
+            )
+        }
 
-                <div className="cart-bottom-section">
-                    <div className="line"></div>
-                    <div className="total-price-container">
-                        <span className="total-total">Prix Total de la Commande: <span className="total-total-price">{getTotalPrice()} MAD</span></span>
-                    </div>
+        else{
+            return ReactDom.createPortal(
 
-                    <div>
-                        <button className="check-out-button">Commander Maintenant</button>
+                <>
+                    <div
+                        className="background" 
+                        onClick={() => props.setIsOpen(false)}>
                     </div>
-                </div>
-            </div>
-        </>,
-        document.getElementById("cart-portal")
-    )
+        
+                    <div className="cart">
+                        <div className="quit-button">
+                            <span 
+                                className="btn" 
+                                onClick={() => props.setIsOpen(false)}>
+                                    <span>Fermer</span>
+                                    <ArrowRightAltIcon className="icon" />
+                            </span>
+                        </div>
+
+                        <div className="cart-is-empty">
+                            <h3>Panier vide.</h3>
+                        </div>
+                        
+                    </div>
+                </>,
+                document.getElementById("cart-portal") as HTMLElement
+            )
+        }
+    }
+    
+    
 }
 
 export default CartComponent

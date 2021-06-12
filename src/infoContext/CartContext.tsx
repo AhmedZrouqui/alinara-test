@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 
 
 type Action = IAddToCart | IUpdateUpCart | IUpdateDownCart | IRemoveFromCart | IClearCart
-type ICartContext = [IProductItem[] | undefined, React.Dispatch<Action>];
+type ICartContext = [IProductItem[], React.Dispatch<Action>];
 
 
 export const CartContext = React.createContext<ICartContext | undefined>(undefined);

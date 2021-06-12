@@ -12,13 +12,21 @@
   z-index: 1000;
 }
 
+.cart-is-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cart {
   position: fixed;
   top: 0;
   right: 0;
   background: white;
   z-index: 2000;
-  width: 40%;
+  width: 30%;
   height: 100vh;
 
   transition: 0.3s all ease-in-out;
@@ -26,14 +34,17 @@
   .quit-button {
     height: 60px;
     padding: 15px;
+
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
+      color: white;
+      background: $black-grey;
       font-size: 18px;
       position: relative;
       cursor: pointer;
-      width: 20%;
+      width: 30%;
 
       .icon {
         font-size: 60px;
@@ -60,23 +71,24 @@
       margin-bottom: 15px;
     }
 
+    .products {
+      width: 100%;
+    }
+
     .product-div {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 15px;
-      overflow-y: auto;
-
       width: 100%;
 
       .imgContainer {
-        width: 200px;
-        height: 200px;
-        border: 1px solid #a7a7a7;
+        width: 150px;
+        height: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 15px;
+        padding: 10px;
 
         img {
           max-width: 100%;

@@ -8,7 +8,7 @@ import { useCart } from '../../infoContext/CartContext';
 
 
 
-const Navigation = ({setIsOpen}) => {
+const Navigation = ({setIsOpen}: {setIsOpen: Function}) => {
 
     type humAction = true | false
     const navReducer = (state:boolean, action: humAction) => {
