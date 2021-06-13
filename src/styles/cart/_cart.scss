@@ -134,7 +134,7 @@
               text-align: center;
               border: 1px solid $black-grey;
               width: 80px;
-
+              margin: 0 2px;
               font-size: 18px;
               font-weight: 500;
             }
@@ -147,7 +147,7 @@
               border: 1px solid $black-grey;
               cursor: pointer;
               font-size: 18px;
-
+              border-radius: 0;
               font-weight: 500;
 
               &:hover {
@@ -185,10 +185,48 @@
       margin-top: 15px;
       border: none;
       padding: 15px 30px;
-      background: $black-grey;
+      background: #adbbae;
       color: white;
       width: 100%;
       cursor: pointer;
     }
   }
+}
+
+
+@media screen and (max-width: 600px){
+  .cart{
+    height: 100vh;
+
+    .quit-button{
+      width: 100%;
+      .btn{
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+    
+    .cart-display{
+      height: 70%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .cart{
+    height: 100vh;
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 1600px) {
+
+  .cart{
+    height: 100vh;
+    width: 100%;
+  }
+
 }

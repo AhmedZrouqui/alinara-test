@@ -1,6 +1,6 @@
 .hero {
   height: calc(100vh - 70px - 40px);
-  width: 100%;
+  width: 100vw;
 
   .content {
     width: 100%;
@@ -32,9 +32,9 @@
 
       .buy-now-btn {
         padding: 20px 40px;
-        color: white;
+        color: #d1d2ce;
         text-decoration: none;
-        background: $black-grey;
+        background: #36322f;
 
         font-size: 20px;
         text-transform: lowercase;
@@ -42,4 +42,20 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 580px) {
+
+  .hero{
+    .content{
+      &-text{
+        width: 90%;
+        font-size: 2rem;
+        .buy-now-btn{
+          width: 80%;
+        }
+      }
+    }
+  }
+  
 }

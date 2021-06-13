@@ -10,7 +10,7 @@ const Hero = () => {
                 <div className="content">
                     <img src={heroImg}></img>
                     <div className="content-text">
-                        <h1>Enara!</h1>
+                        <h1 style= {{textTransform:'uppercase', fontWeight:500}}>Enara!</h1>
                         <h2>Illuminez votre chemin vers l'inconnu</h2>
 
                         <Link className="buy-now-btn" to="">Acheter Maintenant</Link>

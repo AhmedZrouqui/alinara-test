@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { useCart } from '../../infoContext/CartContext'
 import { useProducts } from '../../infoContext/ProductContext'
 
@@ -44,6 +45,12 @@ const Bestseller = () => {
                     displayProducts()
                 }
             </div>
+
+            <div className="see-all-products">
+                <Link to ="" className="see-all-products-btn">
+                    Voir tout les produits
+                </Link>
+            </div>  
         </div>
     )
 }
