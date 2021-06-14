@@ -56,6 +56,9 @@ const Products = ({selectedCategory, setPageNumber, pageNumber}: {selectedCatego
 
     return (
         <div className="products">
+            <span className="title">
+                Catégorie : <span className="applied-category">{selectedCategory}</span>
+            </span>
             <div className="products-display">
                 {
                     displayProducts()

@@ -1050,36 +1050,38 @@
 
 .productsComponent {
   margin-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 45px;
 }
 
 .productsComponent .title {
-  text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  position: relative;
+}
+
+.productsComponent .category-products {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 45px;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
 }
 
 .categories {
-  margin: 120px 0 60px 0;
-  width: 100vw;
+  width: 100%;
+}
+
+.categories .title {
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 .categories .category-list {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 60%;
+  padding: 20px;
+  border: 1px #A7A7A7 solid;
   margin: 0 auto;
 }
 
@@ -1088,7 +1090,7 @@
   color: #202124;
   font-size: 0.9rem;
   position: relative;
-  text-decoration: underline;
+  margin: .6rem 0;
 }
 
 .categories .category-list .category-item > .count {
@@ -1107,8 +1109,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: -16px;
-  right: -20px;
+  top: 0;
+  right: 0;
 }
 
 .products {
@@ -1119,29 +1121,39 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
+  width: 100%;
+}
+
+.products .title {
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 25px;
+  color: #A7A7A7;
+  margin-bottom: 10px;
+}
+
+.products .title .applied-category {
+  padding: 5px 10px;
+  background: #e0e0e0;
+  border-radius: 25px;
+  font-size: .8rem;
+  font-weight: 400;
+  color: #202124;
 }
 
 .products .products-display {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (400px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 400px);
+  -ms-grid-columns: (350px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 350px);
   grid-gap: 15px;
   grid-row-gap: 40px;
-  margin-top: 50px;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .products .products-display .product-div {
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 600px;
   border: 1px solid #a7a7a7;
   padding: 15px;
   display: -ms-grid;

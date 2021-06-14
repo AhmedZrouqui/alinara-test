@@ -36,6 +36,7 @@ const Categories = ({setSelectedCategory, setPageNumber} : {setSelectedCategory:
 
     return (
         <div className="categories">
+            <span className="title">Categories</span>
             <ul className="category-list">
                 {
                     displayCategories()

@@ -9,14 +9,16 @@ const ProductsComponent = () => {
 
     return (
         <div className="productsComponent">
-            <h3 className="title">Notre catalogue</h3>
-            <Categories setSelectedCategory={setSelectedCategory}
-                        setPageNumber={setPageNumber}/>
+
+            <div className="category-products">
+                <Categories setSelectedCategory={setSelectedCategory}
+                            setPageNumber={setPageNumber}/>
 
 
-            <Products selectedCategory={selectedCategory}
-                    pageNumber={pageNumber}
-                    setPageNumber={setPageNumber} />
+                <Products selectedCategory={selectedCategory}
+                        pageNumber={pageNumber}
+                        setPageNumber={setPageNumber} />
+            </div>
         </div>
     )
 }

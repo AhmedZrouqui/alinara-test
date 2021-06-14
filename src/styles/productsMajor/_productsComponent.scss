@@ -1,12 +1,15 @@
 .productsComponent {
   margin-top: 60px;
-  display: flex;
-  flex-direction: column;
+  padding: 45px;
 
   .title{
-    text-align: center;
     text-transform: uppercase;
     font-weight: 300;
-    position: relative;
+  }
+
+  .category-products{
+    display: grid;
+    grid-gap: 45px;
+    grid-template-columns: 15% 85%;
   }
 }

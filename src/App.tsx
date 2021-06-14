@@ -9,6 +9,8 @@ import HomeComponent from './majorComponents/HomeComponent';
 import ProductsComponent from './majorComponents/ProductsComponent';
 import CategoryProvider from './infoContext/CategoryContext';
 
+import ScrollToTop from './helpers/scrollToTop'
+
 
 
 function App() {
@@ -20,16 +22,18 @@ function App() {
   return (
       <div className="App">
         <Router>
+          <ScrollToTop>
             <NewsSection />
             <Navigation setIsOpen={setIsOpen}/>
             <CartComponent isOpen={isOpen} setIsOpen={setIsOpen} />
-              <Switch>
-                <Route exact path="/" component={HomeComponent} ></Route>
-                <CategoryProvider>
-                  <Route exact path="/products" component={ProductsComponent}></Route>
-                </CategoryProvider>
-              </Switch>
-            <Footer />
+                <Switch>
+                  <Route exact path={["/home", "/"]} component={HomeComponent} ></Route>
+                  <CategoryProvider>
+                    <Route exact path="/products" component={ProductsComponent}></Route>
+                  </CategoryProvider>
+                </Switch>
+              <Footer />
+            </ScrollToTop>
         </Router>
       </div>
   );

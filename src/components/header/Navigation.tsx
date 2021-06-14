@@ -56,13 +56,13 @@ const Navigation = ({setIsOpen}: {setIsOpen: Function}) => {
             </div>
 
             <div className="logo-section">
-                <Link to ="/" className="logo-text">Enara</Link>
+                <Link to ="/home" className="logo-text">Enara</Link>
             </div>
 
             <div className="nav" id="navDiv">
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <Link to="/" className="nav-link">Accueil</Link>
+                        <Link to="/home" className="nav-link">Accueil</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/products" className="nav-link">Nos Produits</Link>

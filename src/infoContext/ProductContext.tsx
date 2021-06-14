@@ -1,3 +1,4 @@
+import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress';
 import * as React from 'react';
 import { useQuery } from "react-query";
 
@@ -24,11 +25,20 @@ const ProductProvider: React.FC<{}> = ({children}: { children?: React.ReactNode 
         setProducts(data)
     }, [data])
 
-    return (
-        <ProductContext.Provider value={[products, setProducts]}>
-            {children}
-        </ProductContext.Provider>
-    );
+
+    if(isLoading){
+        return (
+            <React.Fragment>
+                <CircularProgress />
+            </React.Fragment>
+        );
+    } else{
+        return (
+            <ProductContext.Provider value={[products, setProducts]}>
+                {children}
+            </ProductContext.Provider>
+        );
+    }
 
 };
 
