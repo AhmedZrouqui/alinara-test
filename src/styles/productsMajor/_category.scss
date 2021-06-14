@@ -1,0 +1,15 @@
+.categories {
+  .category-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+
+    .category-item {
+      cursor: pointer;
+      color: $black-grey;
+      text-decoration: underline;
+      font-size: 0.9rem;
+    }
+  }
+}

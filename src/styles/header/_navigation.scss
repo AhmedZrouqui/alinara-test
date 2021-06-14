@@ -22,7 +22,7 @@
     color: $black-grey;
     font-size: 24px;
 
-    .logo-text{
+    .logo-text {
       font-weight: 500;
       color: $black-grey;
       text-decoration: none;
@@ -140,11 +140,9 @@
 }
 
 @media screen and (max-width: 400px) {
-
-  .navigation{
+  .navigation {
     padding: 0;
   }
-  
 }
 
 @media screen and (max-width: 1200px) {
@@ -168,7 +166,7 @@
       }
     }
 
-    .logo-section{
+    .logo-section {
       justify-content: center;
     }
 
@@ -189,9 +187,8 @@
         flex-direction: column;
         height: 40%;
 
-        .nav-item{
-
-          .nav-link{
+        .nav-item {
+          .nav-link {
             color: white;
             font-size: 24px;
           }

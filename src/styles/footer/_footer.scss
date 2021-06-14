@@ -1,280 +1,266 @@
-.footer{
+.footer {
+  margin-top: 80px;
 
-    margin-top: 80px;
+  max-width: 100vw;
 
-    max-width:100vw;
+  .newsletter-subscribe-container {
+    background: transparent;
+    padding: 30px;
 
+    .newsletter-container {
+      height: 350px;
+      background: $whitesmoke;
+      color: $black-grey;
 
-    .newsletter-subscribe-container{
-        background: transparent;
-        padding: 30px;
+      text-align: center;
 
-        .newsletter-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
+      .newsletter-title {
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
 
+      .newsletter-details {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
 
-            height: 350px;
-            background: $whitesmoke;
-            color: $black-grey;
-
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .newsletter-title{
-                font-size: 2.2rem;
-                font-weight: 500;
-            }
-
-            .newsletter-details{
-                font-size: 1.2rem;
-                margin-bottom: 40px;
-            }
-
-            .form-div{
-                width: 40vw;
-                height: 50px;
-                display: flex;
-                background: chocolate;
-                input[type="text"]{
-                    border: 1px $black-grey solid;
-                    width: 70%;
-                    padding: 5px;
-                    font-size: 1rem;
-                    outline: none;
-                    border-radius: 0px;
-                }
-
-                .subscribe-btn{
-                    width: 30%;
-                    background: $black-grey;
-                    font-size: 1rem;
-                    color: white;
-                    border: 1px $black-grey solid;
-
-                    border-radius: 0px;
-
-
-                }
-            }
-        }
-    }
-
-    .footer-container{
-        background: $black-grey;
-        color: #A7A7A7;
-        font-size: 1rem;
-
-        width: 100vw;
-        padding: 30px;
-
-        display: flex;
-
-        .title{
-            color: #e67e22;
-        }
-
-        .quick-links{
-            flex: 1;
-
-            .lists-container{
-                margin-top: 20px;
-                display: flex;
-
-                max-width: 50%;
-
-                justify-content: space-between;
-
-
-                .list {
-                    list-style: none;
-
-                    .item{
-                        margin-top: 10px;
-                        .link{
-                            color: #A7A7A7;
-                            font-weight: 300;
-                            text-transform: lowercase;
-                            text-decoration: none;
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .address-container{
-            flex: 1;
-            .title{
-                margin-bottom: 20px;
-            }
-
-            .address-list{
-                list-style: none;
-                &-item{
-                    font-size: 14px;
-                    color: #A7A7A7;
-                    font-weight: 300;
-                }
-            }
-        }
-
-        .newsletter-container{
-            flex: 1;
-
-            .title{
-                margin-bottom: 30px;
-            }
-
-            .form-div{
-                
-                height: 38px;
-                display: flex;
-                input[type="text"]{
-                    border: 1px $black-grey solid;
-                    width: 60%;
-                    padding: 5px;
-                    font-size: 1rem;
-                    outline: none;
-                    border-radius: 0px;
-                }
-
-                .subscribe-btn{
-                    width: 30%;
-                    background: $black-grey;
-                    font-size: 1rem;
-                    color: white;
-                    border: 2px #e67e22 solid;
-
-                    border-radius: 0px;
-
-
-                }
-            }
-        }
-
-        .social-container{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-
-            .title{
-                margin-bottom: 30px ;
-            }
-
-            .list{
-                list-style: none;
-                display: flex;
-
-                .item{
-                    margin-left: 20px;
-
-                    .link{
-                        color: #A7A7A7;
-                        .social-icon{
-                            font-size: 32px;
-                        }
-                    }
-                }
-                
-            }
-        }
-    }
-    .bottom-footer{
+      .form-div {
+        width: 40vw;
         height: 50px;
         display: flex;
+        background: chocolate;
+        input[type="text"] {
+          border: 1px $black-grey solid;
+          width: 70%;
+          padding: 5px;
+          font-size: 1rem;
+          outline: none;
+          border-radius: 0px;
+        }
 
-        background: #17171a;
-        color: #A7A7A7;
-        font-size: 14px;
-        
-        align-items: center;
-        justify-content: center;
+        .subscribe-btn {
+          width: 30%;
+          background: $black-grey;
+          font-size: 1rem;
+          color: white;
+          border: 1px $black-grey solid;
 
-        
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+
+  .footer-container {
+    background: $black-grey;
+    color: #a7a7a7;
+    font-size: 1rem;
+
+    width: 100vw;
+    padding: 30px;
+
+    display: flex;
+
+    .title {
+      color: #e67e22;
     }
 
+    .quick-links {
+      flex: 1;
+
+      .lists-container {
+        margin-top: 20px;
+        display: flex;
+
+        max-width: 50%;
+
+        justify-content: space-between;
+
+        .list {
+          list-style: none;
+
+          .item {
+            margin-top: 10px;
+            .link {
+              color: #a7a7a7;
+              font-weight: 300;
+              text-transform: lowercase;
+              text-decoration: underline;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .address-container {
+      flex: 1;
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .address-list {
+        list-style: none;
+        &-item {
+          font-size: 14px;
+          color: #a7a7a7;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .newsletter-container {
+      flex: 1;
+
+      .title {
+        margin-bottom: 30px;
+      }
+
+      .form-div {
+        height: 38px;
+        display: flex;
+        input[type="text"] {
+          border: 1px $black-grey solid;
+          width: 60%;
+          padding: 5px;
+          font-size: 0.8rem;
+          outline: none;
+          border-radius: 0px;
+        }
+
+        .subscribe-btn {
+          width: 30%;
+          background: $black-grey;
+          font-size: 0.7rem;
+          color: white;
+          border: 2px #e67e22 solid;
+
+          border-radius: 0px;
+        }
+      }
+    }
+
+    .social-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .title {
+        margin-bottom: 30px;
+      }
+
+      .list {
+        list-style: none;
+        display: flex;
+
+        .item {
+          margin-left: 20px;
+
+          .link {
+            color: #a7a7a7;
+            .social-icon {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    height: 50px;
+    display: flex;
+
+    background: #17171a;
+    color: #a7a7a7;
+    font-size: 14px;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .footer {
+    .footer-container {
+      .quick-links {
+        .lists-container {
+          max-width: 80%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1060px) {
-    
-    .footer{
-        .newsletter-subscribe-container{
-
-
-            .newsletter-container{
-
-                .form-div{
-                    width: 60vw;
-                }
-            }
+  .footer {
+    .newsletter-subscribe-container {
+      .newsletter-container {
+        .form-div {
+          width: 60vw;
         }
-
-        .footer-container{
-            flex-direction: column;
-            align-items: center;
-
-            & > div{
-                width: 80%;
-                margin-bottom: 40px;
-            }
-
-            .social-container{
-                align-items: flex-start;
-            }
-
-            
-        }
+      }
     }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+
+      & > div {
+        width: 80%;
+        margin-bottom: 40px;
+      }
+
+      .social-container {
+        align-items: flex-start;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
-    
-    .footer{
-        width: 100vw;
-        .newsletter-subscribe-container{
-            padding: 0;
+  .footer {
+    width: 100vw;
+    .newsletter-subscribe-container {
+      padding: 0;
 
-            .newsletter-container{
-                width: 100vw;
-                .form-div{
-                    width: 90vw;
-                }
-            }
+      .newsletter-container {
+        width: 100vw;
+        .form-div {
+          width: 90vw;
         }
+      }
     }
+  }
 }
 
-
 @media screen and (max-width: 600px) {
-    .footer{
-
-        .footer-container{
-            .quick-links{
-                .lists-container{
-                    max-width: 80%;
-                }
-            }
-
-            .newsletter-container{
-                .form-div{
-                    flex-direction: column;
-                    height: 80px;
-                    input[type="text"]{
-                        width: 80%;
-                    }
-                    .subscribe-btn{
-                        width: 80%;
-                        height: 40px;
-                    }
-                }
-            }
-    
+  .footer {
+    .footer-container {
+      .quick-links {
+        .lists-container {
+          max-width: 80%;
         }
+      }
 
+      .newsletter-container {
+        .form-div {
+          flex-direction: column;
+          height: 80px;
+          input[type="text"] {
+            width: 80%;
+          }
+          .subscribe-btn {
+            width: 80%;
+            height: 40px;
+          }
+        }
+      }
     }
+  }
 }

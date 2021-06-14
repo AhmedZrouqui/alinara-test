@@ -7,6 +7,7 @@ import CartComponent from './components/content/CartComponent';
 import Footer from './components/footer/Footer';
 import HomeComponent from './majorComponents/HomeComponent';
 import ProductsComponent from './majorComponents/ProductsComponent';
+import CategoryProvider from './infoContext/CategoryContext';
 
 
 
@@ -24,8 +25,9 @@ function App() {
             <CartComponent isOpen={isOpen} setIsOpen={setIsOpen} />
               <Switch>
                 <Route exact path="/" component={HomeComponent} ></Route>
-
-                <Route exact path="/products" component={ProductsComponent}></Route>
+                <CategoryProvider>
+                  <Route exact path="/products" component={ProductsComponent}></Route>
+                </CategoryProvider>
               </Switch>
             <Footer />
         </Router>
