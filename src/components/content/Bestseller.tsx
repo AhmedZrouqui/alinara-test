@@ -47,7 +47,7 @@ const Bestseller = () => {
             </div>
 
             <div className="see-all-products">
-                <Link to ="" className="see-all-products-btn">
+                <Link to ="/products" className="see-all-products-btn">
                     Voir tout les produits
                 </Link>
             </div>  

@@ -1049,7 +1049,26 @@
 }
 
 .productsComponent {
-  padding: 0 45px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.productsComponent .title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+}
+
+.categories {
+  margin: 120px 0 60px 0;
+  width: 100vw;
 }
 
 .categories .category-list {
@@ -1061,12 +1080,159 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 60%;
+  margin: 0 auto;
 }
 
 .categories .category-list .category-item {
   cursor: pointer;
   color: #202124;
-  text-decoration: underline;
   font-size: 0.9rem;
+  position: relative;
+  text-decoration: underline;
+}
+
+.categories .category-list .category-item > .count {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #f3f0ee;
+  border-radius: 50%;
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -16px;
+  right: -20px;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.products .products-display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 15px;
+  grid-row-gap: 40px;
+  margin-top: 50px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products .products-display .product-div {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #a7a7a7;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3fr 2fr 1fr;
+      grid-template-rows: 3fr 2fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products .products-display .product-div .imgContainer {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products .products-display .product-div .imgContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .products-display .product-div .infosContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.products .products-display .product-div .infosContainer > div {
+  color: #202124;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.products .products-display .product-div .addContainer {
+  width: 100%;
+}
+
+.products .products-display .product-div .addContainer button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 15px 30px;
+  max-width: 300px;
+  background: #adbbae;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+.products .products-display .product-div .addContainer button:hover {
+  background: #788178;
+  border-radius: 5px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+.products .paginationBtns {
+  margin-top: 50px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products .paginationBtns a {
+  margin: 14px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.products .paginationBtns .left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.products .paginationActive {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=global.css.map */

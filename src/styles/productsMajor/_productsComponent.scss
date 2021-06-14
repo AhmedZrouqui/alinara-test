@@ -1,3 +1,12 @@
 .productsComponent {
-  padding: 0 45px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+  }
 }

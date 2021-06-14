@@ -1,15 +1,36 @@
 .categories {
+  margin: 120px 0 60px 0;
+
+  width: 100vw;
+
   .category-list {
     list-style: none;
     display: flex;
     justify-content: space-between;
     max-width: 60%;
+    margin: 0 auto;
 
     .category-item {
       cursor: pointer;
       color: $black-grey;
-      text-decoration: underline;
       font-size: 0.9rem;
+      position: relative;
+      text-decoration: underline;
+
+      & > .count{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: $whitesmoke;
+        border-radius: 50%;
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        top: -16px;
+        right: -20px;
+      }
     }
   }
 }
